@@ -1,6 +1,8 @@
 const notesContainer = document.querySelector(".contentContainer");
 const createBtn = document.querySelector(".logo");
 let notes = document.querySelectorAll(".inputBox");
+var icon=document.getElementById("icon");
+
 
 function showNotes()
 {
@@ -46,3 +48,17 @@ document.addEventListener("keydown",event =>{
         event.preventDefault();
     }
 })
+
+// code for theme changer 
+icon.onclick=function(){
+
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+       icon.innerHTML=' <i class="fa-solid fa-moon  "></i>'
+
+    }
+    else{
+        icon.innerHTML=' <i class="fa-solid fa-sun "></i>'
+    }
+}
+
